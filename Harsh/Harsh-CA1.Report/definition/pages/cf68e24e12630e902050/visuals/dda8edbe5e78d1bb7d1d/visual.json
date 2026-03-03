@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "dda8edbe5e78d1bb7d1d",
+  "position": {
+    "x": 873.98444252376839,
+    "y": 604.04494382022472,
+    "z": 11001,
+    "height": 108.41832324978392,
+    "width": 339.63699222126189,
+    "tabOrder": 11001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "This chart shows how points per game and goal difference per game have changed over the years, with the size of the bubbles showing the league's rank. Moving toward the top-right shows that efficiency and competitive strength have gotten better. "
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

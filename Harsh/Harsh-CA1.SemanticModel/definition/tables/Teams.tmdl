@@ -1,0 +1,24 @@
+table Teams
+	lineageTag: 46b1631a-73bf-4471-8bae-6e5002268e14
+
+	column Team
+		lineageTag: d6cb868f-e18e-4586-b597-fcaa2a056212
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Team]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Teams = calculated
+		mode: import
+		source =
+				
+				DISTINCT(
+				    UNION(
+				        SELECTCOLUMNS(PremierLeague_22_25, "Team", PremierLeague_22_25[HomeTeam]),
+				        SELECTCOLUMNS(PremierLeague_22_25, "Team", PremierLeague_22_25[AwayTeam])
+				    )
+				)
+
+	annotation PBI_Id = 0af225bce4c24dfbb08faec10550bf89
+

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "e8ba47175e2a68585708",
+  "position": {
+    "x": 748.97147796024194,
+    "y": 269.93949870354362,
+    "z": 10002,
+    "height": 54.209161624891962,
+    "width": 500.05185825410541,
+    "tabOrder": 10002
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Lower dispersion indicates a more competitive league, while higher values shows that there is a bigger difference between top and bottom teams ",
+                    "textStyle": {
+                      "fontSize": "10pt",
+                      "color": "#000000"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

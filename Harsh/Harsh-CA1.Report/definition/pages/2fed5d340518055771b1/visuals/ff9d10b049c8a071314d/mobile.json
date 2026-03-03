@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.2.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 476,
+    "z": 4,
+    "height": 370,
+    "width": 324,
+    "tabOrder": 4
+  },
+  "objects": {
+    "total": [],
+    "columnWidth": [
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "36D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "PremierLeague_22_25.PPG"
+        }
+      }
+    ],
+    "grid": [],
+    "values": []
+  }
+}

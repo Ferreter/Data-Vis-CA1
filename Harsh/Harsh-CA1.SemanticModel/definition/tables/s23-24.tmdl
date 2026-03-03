@@ -1,0 +1,221 @@
+table s23-24
+	lineageTag: 1175824c-9f4d-41e3-b023-5927e6b950e7
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a603ba5c-1ee9-43c0-a26a-e27df469efa3
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 222eee25-db6d-4bb3-9b2e-ee7da3bdc4ed
+			defaultHierarchy: LocalDateTable_55f96073-fb4f-4945-a42f-f694ad0904e3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column HomeTeam
+		dataType: string
+		lineageTag: 736eb8bb-e998-4f4f-8cb2-375057351295
+		summarizeBy: none
+		sourceColumn: HomeTeam
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwayTeam
+		dataType: string
+		lineageTag: c249cc42-bc64-4852-9629-c48a52142a2a
+		summarizeBy: none
+		sourceColumn: AwayTeam
+
+		annotation SummarizationSetBy = Automatic
+
+	column FTHG
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f19d6f9-76d1-40c3-9628-a0f45a6e365d
+		summarizeBy: sum
+		sourceColumn: FTHG
+
+		annotation SummarizationSetBy = Automatic
+
+	column FTAG
+		dataType: int64
+		formatString: 0
+		lineageTag: 5256b4cc-2b16-4ab3-aac4-eb8a4c175d59
+		summarizeBy: sum
+		sourceColumn: FTAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column FTR
+		dataType: string
+		lineageTag: c4c0be35-c290-4690-a24d-9e7563b1a037
+		summarizeBy: none
+		sourceColumn: FTR
+
+		annotation SummarizationSetBy = Automatic
+
+	column HTHG
+		dataType: int64
+		formatString: 0
+		lineageTag: c26be292-72a4-4a02-9e94-51a74117e9fe
+		summarizeBy: sum
+		sourceColumn: HTHG
+
+		annotation SummarizationSetBy = Automatic
+
+	column HTAG
+		dataType: int64
+		formatString: 0
+		lineageTag: dbf89398-4e3e-432f-a4fb-cfe3b86d5096
+		summarizeBy: sum
+		sourceColumn: HTAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column HTR
+		dataType: string
+		lineageTag: ecdff047-e517-4f56-b632-daa91acab344
+		summarizeBy: none
+		sourceColumn: HTR
+
+		annotation SummarizationSetBy = Automatic
+
+	column Referee
+		dataType: string
+		lineageTag: 9aa5e850-eb82-4d68-9dac-aaba1918c5dc
+		summarizeBy: none
+		sourceColumn: Referee
+
+		annotation SummarizationSetBy = Automatic
+
+	column HS
+		dataType: int64
+		formatString: 0
+		lineageTag: 4500e953-267c-4f61-bb77-c2e74526f94d
+		summarizeBy: sum
+		sourceColumn: HS
+
+		annotation SummarizationSetBy = Automatic
+
+	column AS
+		dataType: int64
+		formatString: 0
+		lineageTag: 5379d5f1-80ba-47f8-9820-b85ced35b2ab
+		summarizeBy: sum
+		sourceColumn: AS
+
+		annotation SummarizationSetBy = Automatic
+
+	column HST
+		dataType: int64
+		formatString: 0
+		lineageTag: 109499fa-f527-4f14-a14e-3724be52faa7
+		summarizeBy: sum
+		sourceColumn: HST
+
+		annotation SummarizationSetBy = Automatic
+
+	column AST
+		dataType: int64
+		formatString: 0
+		lineageTag: afd12b75-9705-424f-a451-a47a6bf498a6
+		summarizeBy: sum
+		sourceColumn: AST
+
+		annotation SummarizationSetBy = Automatic
+
+	column HF
+		dataType: int64
+		formatString: 0
+		lineageTag: fa9a9d38-b046-48f8-b55f-da83d209e76f
+		summarizeBy: sum
+		sourceColumn: HF
+
+		annotation SummarizationSetBy = Automatic
+
+	column AF
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d1f3cbf-5eb8-44b3-8cc8-d2f4a60243c4
+		summarizeBy: sum
+		sourceColumn: AF
+
+		annotation SummarizationSetBy = Automatic
+
+	column HC
+		dataType: int64
+		formatString: 0
+		lineageTag: e92728be-35f0-4ee4-bb7d-5d45bb9e7fc8
+		summarizeBy: sum
+		sourceColumn: HC
+
+		annotation SummarizationSetBy = Automatic
+
+	column AC
+		dataType: int64
+		formatString: 0
+		lineageTag: d640a434-e2d8-4ab0-bd21-267d7865cb15
+		summarizeBy: sum
+		sourceColumn: AC
+
+		annotation SummarizationSetBy = Automatic
+
+	column HY
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f962b03-7ec3-4997-8c5b-3d79b4411518
+		summarizeBy: sum
+		sourceColumn: HY
+
+		annotation SummarizationSetBy = Automatic
+
+	column AY
+		dataType: int64
+		formatString: 0
+		lineageTag: a9e1b9b4-0a36-42f2-84a6-f4baf09ac242
+		summarizeBy: sum
+		sourceColumn: AY
+
+		annotation SummarizationSetBy = Automatic
+
+	column HR
+		dataType: int64
+		formatString: 0
+		lineageTag: b6463b87-d4ba-4061-befc-d77e9a1d0cd7
+		summarizeBy: sum
+		sourceColumn: HR
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR
+		dataType: int64
+		formatString: 0
+		lineageTag: ad91bdd3-ebfd-4644-a813-c0885ce1da07
+		summarizeBy: sum
+		sourceColumn: AR
+
+		annotation SummarizationSetBy = Automatic
+
+	column Season = "2023-24"
+		lineageTag: b7eb901f-a219-4899-a31e-c7d4cbc0bef9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition s23-24 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\hkhat\OneDrive\Desktop\College\Data Vis\Data-Vis-CA1\Harsh\s23-24.csv"),[Delimiter=",", Columns=22, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"HomeTeam", type text}, {"AwayTeam", type text}, {"FTHG", Int64.Type}, {"FTAG", Int64.Type}, {"FTR", type text}, {"HTHG", Int64.Type}, {"HTAG", Int64.Type}, {"HTR", type text}, {"Referee", type text}, {"HS", Int64.Type}, {"AS", Int64.Type}, {"HST", Int64.Type}, {"AST", Int64.Type}, {"HF", Int64.Type}, {"AF", Int64.Type}, {"HC", Int64.Type}, {"AC", Int64.Type}, {"HY", Int64.Type}, {"AY", Int64.Type}, {"HR", Int64.Type}, {"AR", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "ddbe5bc321cc84c7e269",
+  "position": {
+    "x": 748.97147796024194,
+    "y": 602.93863439930851,
+    "z": 10003,
+    "height": 55.315471045808124,
+    "width": 476.819360414866,
+    "tabOrder": 10003
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "The 1st–2nd gap reflects the competitiveness of the title race, while the 1st–4th gap indicates the level of dominance at the top of the league.",
+                    "textStyle": {
+                      "fontSize": "10pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

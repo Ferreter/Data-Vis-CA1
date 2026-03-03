@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Harsh-CA1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d874a3fd-0e0d-41b6-b6d6-7e71e531fc6f"
+  }
+}

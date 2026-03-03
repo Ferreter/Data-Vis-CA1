@@ -1,0 +1,24 @@
+relationship 1693ff51-e576-4388-825e-3a686bfc9252
+	joinOnDateBehavior: datePartOnly
+	fromColumn: s22-23.Date
+	toColumn: LocalDateTable_65c1796b-ab21-43aa-bbfc-63ddd81fdce7.Date
+
+relationship 222eee25-db6d-4bb3-9b2e-ee7da3bdc4ed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: s23-24.Date
+	toColumn: LocalDateTable_55f96073-fb4f-4945-a42f-f694ad0904e3.Date
+
+relationship 56f3d890-8dff-4d95-adfa-464920853639
+	joinOnDateBehavior: datePartOnly
+	fromColumn: s24-25.Date
+	toColumn: LocalDateTable_05467c0c-ff13-4c8a-8303-6a6c37881fde.Date
+
+relationship e0c4be05-cb04-424d-8fca-03d7959d60b9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PremierLeague_22_25.Date
+	toColumn: LocalDateTable_db5273ca-6b50-44fd-9f8f-f184e8c11fe5.Date
+
+relationship f211d973-7e97-eac8-2c46-2c7bb7100c79
+	fromColumn: PremierLeague_22_25.HomeTeam
+	toColumn: Teams.Team
+

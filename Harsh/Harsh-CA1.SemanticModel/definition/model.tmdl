@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["s22-23","s23-24","s24-25"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table s22-23
+ref table DateTableTemplate_c9d25a06-864e-48da-9779-d226a8c3ac77
+ref table LocalDateTable_65c1796b-ab21-43aa-bbfc-63ddd81fdce7
+ref table s23-24
+ref table LocalDateTable_55f96073-fb4f-4945-a42f-f694ad0904e3
+ref table s24-25
+ref table LocalDateTable_05467c0c-ff13-4c8a-8303-6a6c37881fde
+ref table PremierLeague_22_25
+ref table Teams
+ref table LocalDateTable_db5273ca-6b50-44fd-9f8f-f184e8c11fe5
+
+ref cultureInfo en-US
+

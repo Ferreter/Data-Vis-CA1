@@ -1,0 +1,374 @@
+table PremierLeague_22_25
+	lineageTag: 43f1c3e7-ceab-48c5-a872-8c0685cbb483
+
+	measure Points =
+			
+			SUMX(
+			    PremierLeague_22_25,
+			    SWITCH(
+			        TRUE(),
+			        PremierLeague_22_25[FTR] = "H" && PremierLeague_22_25[HomeTeam] = SELECTEDVALUE(Teams[Team]), 3,
+			        PremierLeague_22_25[FTR] = "A" && PremierLeague_22_25[AwayTeam] = SELECTEDVALUE(Teams[Team]), 3,
+			        PremierLeague_22_25[FTR] = "D" && (
+			            PremierLeague_22_25[HomeTeam] = SELECTEDVALUE(Teams[Team]) ||
+			            PremierLeague_22_25[AwayTeam] = SELECTEDVALUE(Teams[Team])
+			        ), 1,
+			        0
+			    )
+			)
+		formatString: 0
+		lineageTag: ca37db5e-b4cd-4365-bf87-3f7eb3b432ed
+
+	measure 'Goal Difference' =
+			
+			CALCULATE(
+			    SUM(PremierLeague_22_25[FTHG]) - SUM(PremierLeague_22_25[FTAG]),
+			    PremierLeague_22_25[HomeTeam] = SELECTEDVALUE(Teams[Team])
+			)
+			+
+			CALCULATE(
+			    SUM(PremierLeague_22_25[FTAG]) - SUM(PremierLeague_22_25[FTHG]),
+			    PremierLeague_22_25[AwayTeam] = SELECTEDVALUE(Teams[Team])
+			)
+		formatString: 0
+		lineageTag: d4105298-a80d-44c2-af92-ceb787585de9
+
+	measure Played =
+			
+			CALCULATE(
+			    COUNTROWS(PremierLeague_22_25),
+			    PremierLeague_22_25[HomeTeam] = SELECTEDVALUE(Teams[Team])
+			)
+			+
+			CALCULATE(
+			    COUNTROWS(PremierLeague_22_25),
+			    PremierLeague_22_25[AwayTeam] = SELECTEDVALUE(Teams[Team])
+			)
+		formatString: 0
+		lineageTag: 69273525-9636-4997-8599-a0400a928a46
+
+	measure PPG = DIVIDE([Points], [Played])
+		lineageTag: eed0abd6-3c4a-49ea-971b-c8993b5b74f1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'GD Per Game' = DIVIDE([Goal Difference], [Played])
+		lineageTag: 1747135a-c45a-479a-95fb-5b826146c691
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dominance Index' = DIVIDE([PPG] + [GD Per Game], 2)
+		lineageTag: 4a12ae4e-0e8a-4d95-ade6-6702485f6fde
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Points Std Dev (Season)' =
+			
+			STDEVX.P(
+			    VALUES(Teams[Team]),
+			    [Points]
+			)
+		lineageTag: e6d95e04-9db5-4dde-8796-8e359ebdebfa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gap 1st-2nd' =
+			
+			VAR T =
+			    ADDCOLUMNS(
+			        VALUES(Teams[Team]),
+			        "Pts", [Points]
+			    )
+			VAR Top1 = MAXX(T, [Pts])
+			VAR Top2 = MAXX(FILTER(T, [Pts] < Top1), [Pts])
+			RETURN
+			Top1 - Top2
+		formatString: 0
+		lineageTag: 8055688d-c70f-434c-a1d1-b555c5564cc9
+
+	measure 'Gap 1st-4th' =
+			
+			VAR T =
+			    ADDCOLUMNS(
+			        VALUES(Teams[Team]),
+			        "Pts", [Points]
+			    )
+			VAR Top1 = MAXX(T, [Pts])
+			VAR Top2 = MAXX(FILTER(T, [Pts] < Top1), [Pts])
+			VAR Top3 = MAXX(FILTER(T, [Pts] < Top2), [Pts])
+			VAR Top4 = MAXX(FILTER(T, [Pts] < Top3), [Pts])
+			RETURN
+			Top1 - Top4
+		formatString: 0
+		lineageTag: 7a145dba-d5fe-4e7a-ac91-918af5c6b549
+
+	measure 'Selected Team Title' =
+			
+			"Performance Trends for " & SELECTEDVALUE(Teams[Team], "Select a Team")
+		lineageTag: 036f4d90-c08a-4273-b2e2-7218dbe25d6f
+
+	measure 'Wins (Team)' =
+			
+			CALCULATE(
+			    COUNTROWS(PremierLeague_22_25),
+			    (
+			        PremierLeague_22_25[FTR] = "H"
+			        && PremierLeague_22_25[HomeTeam] = SELECTEDVALUE(Teams[Team])
+			    )
+			    ||
+			    (
+			        PremierLeague_22_25[FTR] = "A"
+			        && PremierLeague_22_25[AwayTeam] = SELECTEDVALUE(Teams[Team])
+			    )
+			)
+		formatString: 0
+		lineageTag: 37834512-bc3e-4660-9078-498645eeca85
+
+	measure 'Draws (Team)' =
+			
+			CALCULATE(
+			    COUNTROWS(PremierLeague_22_25),
+			    PremierLeague_22_25[FTR] = "D"
+			        &&
+			        (
+			            PremierLeague_22_25[HomeTeam] = SELECTEDVALUE(Teams[Team])
+			            ||
+			            PremierLeague_22_25[AwayTeam] = SELECTEDVALUE(Teams[Team])
+			        )
+			)
+		formatString: 0
+		lineageTag: d72f8c90-d2f4-492f-aaf2-52c1bc213f59
+
+	measure Losses = [Played] - [Wins (Team)] - [Draws (Team)]
+		formatString: 0
+		lineageTag: c40973e3-1825-4df7-88f5-ca7d4dcbe2a3
+
+	measure 'Rank (Season)' =
+			
+			RANKX(
+			    ALL(Teams[Team]),
+			    [Points],
+			    ,
+			    DESC
+			)
+		formatString: 0
+		lineageTag: d331fc99-6c15-43ce-93ab-c32b7671ffd0
+
+	column Date
+		formatString: General Date
+		lineageTag: ce9cd65b-5da3-41ee-a78e-701349a1f73b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: s22-23[Date]
+
+		variation Variation
+			isDefault
+			relationship: e0c4be05-cb04-424d-8fca-03d7959d60b9
+			defaultHierarchy: LocalDateTable_db5273ca-6b50-44fd-9f8f-f184e8c11fe5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column HomeTeam
+		lineageTag: b8e43597-8184-45fa-b180-ab8b6f1b745e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: s22-23[HomeTeam]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwayTeam
+		lineageTag: 6681de0c-5358-4970-9154-dad75b8e238a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: s22-23[AwayTeam]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FTHG
+		formatString: 0
+		lineageTag: 6a1b2e37-dc97-4aa6-b634-fc36cdb96405
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[FTHG]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FTAG
+		formatString: 0
+		lineageTag: af64e46b-5ab6-4de6-b066-0d16e3f0266a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[FTAG]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FTR
+		lineageTag: 6783f8da-6599-40b4-9c01-0b55bd2bb179
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: s22-23[FTR]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HTHG
+		formatString: 0
+		lineageTag: db268ea0-5e7a-42b8-b07c-d842a0128841
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[HTHG]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HTAG
+		formatString: 0
+		lineageTag: e70f6db5-7a6b-4f6b-9473-8aed9f74a0c7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[HTAG]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HTR
+		lineageTag: ecc2e554-bd2c-4d70-aee4-28de71283baa
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: s22-23[HTR]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Referee
+		lineageTag: f894eba0-6453-42a6-8313-fede713e506a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: s22-23[Referee]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HS
+		formatString: 0
+		lineageTag: d1a7eb44-18a5-4ef5-a4d0-1c4106f71e95
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[HS]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AS
+		formatString: 0
+		lineageTag: d2f0217d-9755-49ef-b4bb-4e27b6f28ee3
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[AS]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HST
+		formatString: 0
+		lineageTag: 1bec2656-f4fc-49d0-ae69-b5b81fa0da70
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[HST]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AST
+		formatString: 0
+		lineageTag: f13bdf7f-a5a1-437a-a6df-6f24ed72ecb4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[AST]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HF
+		formatString: 0
+		lineageTag: b249bdaa-245a-4289-931a-82f8661827df
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[HF]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AF
+		formatString: 0
+		lineageTag: c971079c-6541-4ec9-8cc3-2cc2df20a478
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[AF]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HC
+		formatString: 0
+		lineageTag: 95b861be-8797-4138-bbb3-25935816190e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[HC]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AC
+		formatString: 0
+		lineageTag: 65de2132-f2e3-4127-b203-1d9faac23864
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[AC]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HY
+		formatString: 0
+		lineageTag: ca4d8193-3279-4a0a-a2d3-10f6df93a6b7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[HY]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AY
+		formatString: 0
+		lineageTag: 535bf814-3696-49f2-9f09-6a38ef0104af
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[AY]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HR
+		formatString: 0
+		lineageTag: a3d7f4b9-90a4-440d-87a7-89ec69dc1975
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[HR]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR
+		formatString: 0
+		lineageTag: 99841c17-bfb6-4a3e-91b2-d321e45ad222
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: s22-23[AR]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Season
+		lineageTag: d4b42b03-f8da-48ae-874e-8c322bb97156
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: s22-23[Season]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PremierLeague_22_25 = calculated
+		mode: import
+		source =
+				
+				UNION(
+				    's22-23',
+				    's23-24',
+				    's24-25'
+				)
+
+	annotation PBI_Id = dc255176e27d436db9b24a8dea7fb196
+
