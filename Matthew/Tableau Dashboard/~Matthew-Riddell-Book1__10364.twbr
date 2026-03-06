@@ -1,0 +1,2324 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.26.0109.0333                               -->
+<workbook original-version='18.1' source-build='2025.3.2 (20253.26.0109.0333)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='cleaned_season_data' inline='true' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cleaned_season_data' name='textscan.15it11007nd5h11ftgjig0k7av1a'>
+            <connection class='textscan' directory='C:/Users/Matty/Documents/College Notes &amp; Assignments/Year 5/Data Visualisation and Insight/CAs/CA1/Data-Vis-CA1/Matthew/Datasets' filename='cleaned_season_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='string' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Away Team]' />
+            <value name='[Home Team]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[cleaned_season_data.csv].[Away Team]' />
+              <field name='[cleaned_season_data.csv].[Home Team]' />
+            </group>
+          </groups>
+          <relation connection='textscan.15it11007nd5h11ftgjig0k7av1a' name='cleaned_season_data.csv' table='[cleaned_season_data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='gl_ES' separator=';'>
+              <column datatype='date' name='Match Date' ordinal='0' />
+              <column datatype='string' name='Home Team' ordinal='1' />
+              <column datatype='string' name='Away Team' ordinal='2' />
+              <column datatype='integer' name='Full Time Home Goals' ordinal='3' />
+              <column datatype='integer' name='Full Time Away Goals' ordinal='4' />
+              <column datatype='string' name='Full Time Result' ordinal='5' />
+              <column datatype='integer' name='Half Time Home Goals' ordinal='6' />
+              <column datatype='integer' name='Half Time Away Goals' ordinal='7' />
+              <column datatype='string' name='Half Time Result' ordinal='8' />
+              <column datatype='string' name='Match Referee' ordinal='9' />
+              <column datatype='integer' name='Home Team Shots' ordinal='10' />
+              <column datatype='integer' name='Away Team Shots' ordinal='11' />
+              <column datatype='integer' name='Home Team Shots on Target' ordinal='12' />
+              <column datatype='integer' name='Away Team Shots on Target' ordinal='13' />
+              <column datatype='integer' name='Home Team Fouls' ordinal='14' />
+              <column datatype='integer' name='Away Team Fouls' ordinal='15' />
+              <column datatype='integer' name='Home Team Corners' ordinal='16' />
+              <column datatype='integer' name='Away Team Corners' ordinal='17' />
+              <column datatype='integer' name='Home Team Yellow Cards' ordinal='18' />
+              <column datatype='integer' name='Away Team Yellow Cards' ordinal='19' />
+              <column datatype='integer' name='Home Team Red Cards' ordinal='20' />
+              <column datatype='integer' name='Away Team Red Cards' ordinal='21' />
+              <column datatype='string' name='Season' ordinal='22' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;gl_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Match Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Match Date]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Match Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Full Time Home Goals</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Full Time Home Goals]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Full Time Home Goals</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Full Time Away Goals</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Full Time Away Goals]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Full Time Away Goals</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Full Time Result</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Full Time Result]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Full Time Result</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Half Time Home Goals</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Half Time Home Goals]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Half Time Home Goals</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Half Time Away Goals</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Half Time Away Goals]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Half Time Away Goals</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Half Time Result</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Half Time Result]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Half Time Result</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Match Referee</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Match Referee]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Match Referee</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home Team Shots</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home Team Shots]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Home Team Shots</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Away Team Shots</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Away Team Shots]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Away Team Shots</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home Team Shots on Target</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home Team Shots on Target]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Home Team Shots on Target</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Away Team Shots on Target</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Away Team Shots on Target]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Away Team Shots on Target</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home Team Fouls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home Team Fouls]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Home Team Fouls</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Away Team Fouls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Away Team Fouls]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Away Team Fouls</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home Team Corners</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home Team Corners]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Home Team Corners</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Away Team Corners</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Away Team Corners]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Away Team Corners</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home Team Yellow Cards</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home Team Yellow Cards]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Home Team Yellow Cards</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Away Team Yellow Cards</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Away Team Yellow Cards]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Away Team Yellow Cards</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Home Team Red Cards</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Home Team Red Cards]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Home Team Red Cards</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Away Team Red Cards</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Away Team Red Cards]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Away Team Red Cards</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Season</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Season]</local-name>
+            <parent-name>[cleaned_season_data.csv]</parent-name>
+            <remote-alias>Season</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Match Outcome' datatype='string' name='[Calculation_2639696805163008]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Full Time Result] = &quot;H&quot; THEN &quot;Home Win&quot;&#13;&#10;ELSEIF [Full Time Result] = &quot;A&quot; THEN &quot;Away Win&quot;&#13;&#10;ELSE &quot;Draw&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Home Win' datatype='integer' name='[Calculation_2639697107775489]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Full Time Result] = &quot;H&quot; THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Away Win' datatype='integer' name='[Calculation_2639697107976194]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Full Time Result] = &quot;A&quot; THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Goals Scored' datatype='integer' name='[Calculation_2639697110454276]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Full Time Home Goals]&#13;&#10;ELSE [Full Time Away Goals]&#13;&#10;END' />
+      </column>
+      <column caption='Shots' datatype='integer' name='[Calculation_2639697111588869]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Home Team Shots]&#13;&#10;ELSE [Away Team Shots]&#13;&#10;END' />
+      </column>
+      <column caption='Conversion Rate' datatype='real' name='[Calculation_2639697111691270]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_2639697110454276]) / SUM([Calculation_2639697111588869])' />
+      </column>
+      <column caption='Outcome' datatype='string' name='[Calculation_2639697124421640]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Full Time Result] = &quot;H&quot; THEN &quot;Home Win&quot;&#13;&#10;ELSEIF [Full Time Result] = &quot;A&quot; THEN &quot;Away Win&quot;&#13;&#10;ELSE &quot;Draw&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Average Fulltime Home Goals' datatype='real' name='[Calculation_2639697127821321]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([Full Time Home Goals])' />
+      </column>
+      <column caption='Average Fulltime Away Goals' datatype='real' name='[Calculation_2639697127972874]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([Full Time Away Goals])' />
+      </column>
+      <column caption='Home Team Cards' datatype='integer' name='[Calculation_2639697135894539]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Home Team Yellow Cards] + [Home Team Red Cards]' />
+      </column>
+      <column caption='Away Team Cards' datatype='integer' name='[Calculation_2639697136533516]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Away Team Yellow Cards] + [Away Team Red Cards]' />
+      </column>
+      <column caption='Percent of Outcome' datatype='real' name='[Calculation_2639697147256845]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([Full Time Result]) / TOTAL(COUNT([Full Time Result]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Full Time Result]' role='dimension' type='nominal' />
+      <column caption='Location' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+      <column caption='cleaned_season_data.csv' datatype='table' name='[__tableau_internal_object_id__].[cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE]' role='measure' type='quantitative' />
+      <column-instance column='[Full Time Away Goals]' derivation='Sum' name='[cum:sum:Full Time Away Goals:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[Full Time Away Goals]' derivation='Sum' name='[diff:sum:Full Time Away Goals:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='Difference'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Calculation_2639696805163008]' derivation='None' name='[none:Calculation_2639696805163008:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_2639697124421640]' derivation='None' name='[none:Calculation_2639697124421640:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Full Time Result]' derivation='None' name='[none:Full Time Result:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_2639697110454276]' derivation='Sum' name='[sum:Calculation_2639697110454276:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2639697111588869]' derivation='Sum' name='[sum:Calculation_2639697111588869:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2639697135894539]' derivation='Sum' name='[sum:Calculation_2639697135894539:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2639697136533516]' derivation='Sum' name='[sum:Calculation_2639697136533516:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Full Time Away Goals]' derivation='Sum' name='[sum:Full Time Away Goals:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Full Time Home Goals]' derivation='Sum' name='[sum:Full Time Home Goals:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Full Time Result:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;H&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;D&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;A&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_2639696805163008:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Home Win&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Draw&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Away Win&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[cum:sum:Full Time Away Goals:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[diff:sum:Full Time Away Goals:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Away Goals:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697110454276:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697135894539:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697136533516:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697111588869:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Home Goals:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_2639697124421640:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Home Win&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Draw&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Away Win&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Pivot Field Values:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Everton&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Arsenal&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Southampton&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Brighton&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Leicester&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Fulham&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Burnley&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Nott&apos;m Forest&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Aston Villa&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Tottenham&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Man United&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chelsea&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Liverpool&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Luton&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Newcastle&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Sheffield United&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Ipswich&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Crystal Palace&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bournemouth&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;West Ham&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Man City&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Leeds&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Brentford&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Wolves&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='cleaned_season_data.csv' id='cleaned_season_data.csv_2A5096FC77CD455D92E7AFC2950FBBBE'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='string' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[Away Team]' />
+                  <value name='[Home Team]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[cleaned_season_data.csv].[Away Team]' />
+                    <field name='[cleaned_season_data.csv].[Home Team]' />
+                  </group>
+                </groups>
+                <relation connection='textscan.15it11007nd5h11ftgjig0k7av1a' name='cleaned_season_data.csv' table='[cleaned_season_data#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='gl_ES' separator=';'>
+                    <column datatype='date' name='Match Date' ordinal='0' />
+                    <column datatype='string' name='Home Team' ordinal='1' />
+                    <column datatype='string' name='Away Team' ordinal='2' />
+                    <column datatype='integer' name='Full Time Home Goals' ordinal='3' />
+                    <column datatype='integer' name='Full Time Away Goals' ordinal='4' />
+                    <column datatype='string' name='Full Time Result' ordinal='5' />
+                    <column datatype='integer' name='Half Time Home Goals' ordinal='6' />
+                    <column datatype='integer' name='Half Time Away Goals' ordinal='7' />
+                    <column datatype='string' name='Half Time Result' ordinal='8' />
+                    <column datatype='string' name='Match Referee' ordinal='9' />
+                    <column datatype='integer' name='Home Team Shots' ordinal='10' />
+                    <column datatype='integer' name='Away Team Shots' ordinal='11' />
+                    <column datatype='integer' name='Home Team Shots on Target' ordinal='12' />
+                    <column datatype='integer' name='Away Team Shots on Target' ordinal='13' />
+                    <column datatype='integer' name='Home Team Fouls' ordinal='14' />
+                    <column datatype='integer' name='Away Team Fouls' ordinal='15' />
+                    <column datatype='integer' name='Home Team Corners' ordinal='16' />
+                    <column datatype='integer' name='Away Team Corners' ordinal='17' />
+                    <column datatype='integer' name='Home Team Yellow Cards' ordinal='18' />
+                    <column datatype='integer' name='Away Team Yellow Cards' ordinal='19' />
+                    <column datatype='integer' name='Home Team Red Cards' ordinal='20' />
+                    <column datatype='integer' name='Away Team Red Cards' ordinal='21' />
+                    <column datatype='string' name='Season' ordinal='22' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Away Fouls vs Cards plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column datatype='integer' name='[Away Team Fouls]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Away Team Red Cards]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Away Team Yellow Cards]' role='measure' type='quantitative' />
+            <column caption='Away Team Cards' datatype='integer' name='[Calculation_2639697136533516]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Away Team Yellow Cards] + [Away Team Red Cards]' />
+            </column>
+            <column datatype='date' name='[Match Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Match Date]' derivation='Day' name='[dy:Match Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Away Team Fouls]' derivation='Sum' name='[sum:Away Team Fouls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2639697136533516]' derivation='Sum' name='[sum:Calculation_2639697136533516:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' />
+              <lod column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[dy:Match Date:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697136533516:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Away Team Fouls:qk]</cols>
+      </table>
+      <simple-id uuid='{4D7F0CED-457F-43A1-A995-E419A3CBA8FB}' />
+    </worksheet>
+    <worksheet name='Fouls vs Cards'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column datatype='integer' name='[Away Team Fouls]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Away Team Red Cards]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Away Team Yellow Cards]' role='measure' type='quantitative' />
+            <column caption='Home Team Cards' datatype='integer' name='[Calculation_2639697135894539]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Home Team Yellow Cards] + [Home Team Red Cards]' />
+            </column>
+            <column caption='Away Team Cards' datatype='integer' name='[Calculation_2639697136533516]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Away Team Yellow Cards] + [Away Team Red Cards]' />
+            </column>
+            <column datatype='integer' name='[Home Team Fouls]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Home Team Red Cards]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Home Team Yellow Cards]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Away Team Fouls]' derivation='Sum' name='[sum:Away Team Fouls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2639697135894539]' derivation='Sum' name='[sum:Calculation_2639697135894539:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2639697136533516]' derivation='Sum' name='[sum:Calculation_2639697136533516:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Home Team Fouls]' derivation='Sum' name='[sum:Home Team Fouls:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697136533516:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Away Team Fouls:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697135894539:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Home Team Fouls:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[Multiple Values]</cols>
+      </table>
+      <simple-id uuid='{8F2DDD8D-D00E-4F80-AF1D-71991365481B}' />
+    </worksheet>
+    <worksheet name='Full Time Away Goals by Season'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+            <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Full Time Away Goals]' derivation='Sum' name='[sum:Full Time Away Goals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Away Goals:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]</cols>
+      </table>
+      <simple-id uuid='{4B4B002B-18D2-43E7-8979-63E52ECBD364}' />
+    </worksheet>
+    <worksheet name='Full Time Home Goals by Season'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+            <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Full Time Home Goals]' derivation='Sum' name='[sum:Full Time Home Goals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Home Goals:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]</cols>
+      </table>
+      <simple-id uuid='{90BD7089-897E-42F1-A088-2DDF71266BE3}' />
+    </worksheet>
+    <worksheet name='Goals / Shots'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column datatype='integer' name='[Away Team Shots]' role='measure' type='quantitative' />
+            <column caption='Goals Scored' datatype='integer' name='[Calculation_2639697110454276]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Full Time Home Goals]&#13;&#10;ELSE [Full Time Away Goals]&#13;&#10;END' />
+            </column>
+            <column caption='Shots' datatype='integer' name='[Calculation_2639697111588869]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Home Team Shots]&#13;&#10;ELSE [Away Team Shots]&#13;&#10;END' />
+            </column>
+            <column caption='Conversion Rate' datatype='real' name='[Calculation_2639697111691270]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_2639697110454276]) / SUM([Calculation_2639697111588869])' />
+            </column>
+            <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Home Team Shots]' role='measure' type='quantitative' />
+            <column caption='Location' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697111691270]' derivation='User' name='[usr:Calculation_2639697111691270:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[usr:Calculation_2639697111691270:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[usr:Calculation_2639697111691270:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]</cols>
+      </table>
+      <simple-id uuid='{EB92D02D-74B0-4DDC-A3C5-62D6BA0BD0EE}' />
+    </worksheet>
+    <worksheet name='Goals per Season'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column caption='Goals Scored' datatype='integer' name='[Calculation_2639697110454276]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Full Time Home Goals]&#13;&#10;ELSE [Full Time Away Goals]&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+            <column caption='Location' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697110454276]' derivation='Sum' name='[sum:Calculation_2639697110454276:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' value='87' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697110454276:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]</cols>
+      </table>
+      <simple-id uuid='{1D6F454B-33C1-49D8-8180-A7E28076D149}' />
+    </worksheet>
+    <worksheet name='Goals vs Wins plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column caption='Home Win' datatype='integer' name='[Calculation_2639697107775489]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Full Time Result] = &quot;H&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Goals Scored' datatype='integer' name='[Calculation_2639697110454276]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Full Time Home Goals]&#13;&#10;ELSE [Full Time Away Goals]&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Full Time Result]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Match Date]' role='dimension' type='ordinal' />
+            <column caption='Location' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Match Date]' derivation='Day' name='[dy:Match Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697107775489]' derivation='Sum' name='[sum:Calculation_2639697107775489:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2639697110454276]' derivation='Sum' name='[sum:Calculation_2639697110454276:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' />
+              <lod column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[dy:Match Date:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697110454276:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697107775489:qk]</cols>
+      </table>
+      <simple-id uuid='{E5850BBD-FB53-4A9C-B072-27BC1433518C}' />
+    </worksheet>
+    <worksheet name='Home / Away Goals per by Season'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Home / Away Goals per Season</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Full Time Away Goals]' derivation='Sum' name='[sum:Full Time Away Goals:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Full Time Home Goals]' derivation='Sum' name='[sum:Full Time Home Goals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Away Goals:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Home Goals:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[Multiple Values]</rows>
+        <cols>([federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk] / [federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{CD99F7CA-0FA1-4989-A05A-7E2064A029E1}' />
+    </worksheet>
+    <worksheet name='Home Advantage'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column caption='Outcome' datatype='string' name='[Calculation_2639697124421640]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Full Time Result] = &quot;H&quot; THEN &quot;Home Win&quot;&#13;&#10;ELSEIF [Full Time Result] = &quot;A&quot; THEN &quot;Away Win&quot;&#13;&#10;ELSE &quot;Draw&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Percent of Outcome' datatype='real' name='[Calculation_2639697147256845]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([Full Time Result]) / TOTAL(COUNT([Full Time Result]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Full Time Result]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2639697124421640]' derivation='None' name='[none:Calculation_2639697124421640:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697147256845]' derivation='User' name='[usr:Calculation_2639697147256845:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[usr:Calculation_2639697147256845:qk]' value='p0.0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Calculation_2639697124421640:nk]' />
+              <text column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[usr:Calculation_2639697147256845:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3DB1994B-60D4-4064-BACD-7F734F5FDE59}' />
+    </worksheet>
+    <worksheet name='Home Fouls vs Cards plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column caption='Home Team Cards' datatype='integer' name='[Calculation_2639697135894539]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Home Team Yellow Cards] + [Home Team Red Cards]' />
+            </column>
+            <column datatype='integer' name='[Home Team Fouls]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Home Team Red Cards]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Home Team Yellow Cards]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Match Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Match Date]' derivation='Day' name='[dy:Match Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697135894539]' derivation='Sum' name='[sum:Calculation_2639697135894539:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Home Team Fouls]' derivation='Sum' name='[sum:Home Team Fouls:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' />
+              <lod column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[dy:Match Date:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697135894539:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Home Team Fouls:qk]</cols>
+      </table>
+      <simple-id uuid='{F3C3D657-B8A5-493F-8A90-1939C8DCF8FF}' />
+    </worksheet>
+    <worksheet name='Home Team Wins'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column caption='Home Win' datatype='integer' name='[Calculation_2639697107775489]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Full Time Result] = &quot;H&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column datatype='string' name='[Full Time Result]' role='dimension' type='nominal' />
+            <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697107775489]' derivation='Sum' name='[sum:Calculation_2639697107775489:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697107775489:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]</cols>
+      </table>
+      <simple-id uuid='{65D03181-0E39-40C1-BC68-088BE60B055F}' />
+    </worksheet>
+    <worksheet name='Home Wins Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column caption='Home Win' datatype='integer' name='[Calculation_2639697107775489]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Full Time Result] = &quot;H&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column datatype='string' name='[Full Time Result]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Match Date]' role='dimension' type='ordinal' />
+            <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697107775489]' derivation='Sum' name='[sum:Calculation_2639697107775489:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Match Date]' derivation='Year-Trunc' name='[tyr:Match Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Pivot Field Values:nk]' member='&quot;Arsenal&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Values:nk]' member='&quot;Chelsea&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Values:nk]' member='&quot;Liverpool&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Values:nk]' member='&quot;Man City&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Values:nk]' member='&quot;Man United&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697107775489:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[tyr:Match Date:qk]</cols>
+      </table>
+      <simple-id uuid='{2672BF19-5240-4E06-A77A-0BF7358BFE84}' />
+    </worksheet>
+    <worksheet name='Home vs Away Goals'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Full Time Away Goals]' derivation='Sum' name='[sum:Full Time Away Goals:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Full Time Home Goals]' derivation='Sum' name='[sum:Full Time Home Goals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Away Goals:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Home Goals:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Away Goals:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Home Goals:qk] + [federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Full Time Away Goals:qk])</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]</cols>
+      </table>
+      <simple-id uuid='{9DDD4E0B-97D8-4F5C-B440-A1801FD0DFB3}' />
+    </worksheet>
+    <worksheet name='Match Outcomes'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Distribution of Match Outcomes</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column caption='Match Outcome' datatype='string' name='[Calculation_2639696805163008]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Full Time Result] = &quot;H&quot; THEN &quot;Home Win&quot;&#13;&#10;ELSEIF [Full Time Result] = &quot;A&quot; THEN &quot;Away Win&quot;&#13;&#10;ELSE &quot;Draw&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Full Time Result]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Match Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Match Date]' derivation='Count' name='[cnt:Match Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2639696805163008]' derivation='None' name='[none:Calculation_2639696805163008:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Calculation_2639696805163008:nk]' direction='ASC' using='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[cnt:Match Date:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Calculation_2639696805163008:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='180' />
+                <format attr='maxwidth' value='180' />
+                <format attr='minheight' value='534' />
+                <format attr='maxheight' value='534' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[cnt:Match Date:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Calculation_2639696805163008:nk]</cols>
+      </table>
+      <simple-id uuid='{5926EF4F-6BEB-4EEF-AF66-DA085E56CA71}' />
+    </worksheet>
+    <worksheet name='Shots per Team'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column datatype='integer' name='[Away Team Shots]' role='measure' type='quantitative' />
+            <column caption='Goals Scored' datatype='integer' name='[Calculation_2639697110454276]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Full Time Home Goals]&#13;&#10;ELSE [Full Time Away Goals]&#13;&#10;END' />
+            </column>
+            <column caption='Shots' datatype='integer' name='[Calculation_2639697111588869]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Home Team Shots]&#13;&#10;ELSE [Away Team Shots]&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Home Team Shots]' role='measure' type='quantitative' />
+            <column caption='Location' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697110454276]' derivation='Sum' name='[sum:Calculation_2639697110454276:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2639697111588869]' derivation='Sum' name='[sum:Calculation_2639697111588869:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697110454276:qk]' />
+              <text column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]' />
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697111588869:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3BCDE0C1-12F4-414A-9243-1640C8299399}' />
+    </worksheet>
+    <worksheet name='Total Goals per Team'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_season_data' name='federated.0c7goyy1e17x7s13vld4s1dxa4ke' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7goyy1e17x7s13vld4s1dxa4ke'>
+            <column caption='Goals Scored' datatype='integer' name='[Calculation_2639697110454276]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Pivot Field Names] = &quot;Home Team&quot;&#13;&#10;THEN [Full Time Home Goals]&#13;&#10;ELSE [Full Time Away Goals]&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Full Time Away Goals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Full Time Home Goals]' role='measure' type='quantitative' />
+            <column caption='Location' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Team' datatype='string' name='[Pivot Field Values]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2639697110454276]' derivation='Sum' name='[sum:Calculation_2639697110454276:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <alphabetic-sort column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]' direction='ASC' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697110454276:qk]</rows>
+        <cols>[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]</cols>
+      </table>
+      <simple-id uuid='{94048AED-D031-4F32-9C45-C6AA4EE49772}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard - Fouls vs Cards'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='19' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='15' param='horz' type-v2='layout-flow' w='87115' x='586' y='1042'>
+              <zone h='97916' id='7' param='vert' type-v2='layout-flow' w='87115' x='586' y='1042'>
+                <zone h='5469' id='9' type-v2='title' w='87115' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='92447' id='8' type-v2='layout-basic' w='87115' x='586' y='6511' />
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97916' id='18' is-fixed='true' param='vert' type-v2='layout-flow' w='11713' x='87701' y='1042' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='67000' id='28' name='Away Fouls vs Cards plot' w='46917' x='583' y='23500' />
+        <zone h='67375' id='29' name='Home Fouls vs Cards plot' w='51083' x='49833' y='22500' />
+        <zone h='22786' id='26' name='Fouls vs Cards' w='72255' x='27745' y='1302' />
+        <zone h='9750' id='27' name='Fouls vs Cards' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type-v2='color' w='11667' x='1083' y='7625' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='37' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='36' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone h='5469' id='9' type-v2='title' w='87115' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='175' h='22786' id='26' is-fixed='true' name='Fouls vs Cards' w='72255' x='27745' y='1302'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9750' id='27' name='Fouls vs Cards' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type-v2='color' w='11667' x='1083' y='7625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='67375' id='29' is-fixed='true' name='Home Fouls vs Cards plot' w='51083' x='49833' y='22500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='67000' id='28' is-fixed='true' name='Away Fouls vs Cards plot' w='46917' x='583' y='23500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D8660E87-FA20-4731-87A3-B3D46D78BFBE}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard - Goals'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='19' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='15' param='horz' type-v2='layout-flow' w='87115' x='586' y='1042'>
+              <zone h='97916' id='7' param='vert' type-v2='layout-flow' w='87115' x='586' y='1042'>
+                <zone h='5469' id='9' type-v2='title' w='87115' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='92447' id='8' type-v2='layout-basic' w='87115' x='586' y='6511' />
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97916' id='18' is-fixed='true' param='vert' type-v2='layout-flow' w='11713' x='87701' y='1042' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='70625' id='16' name='Goals per Season' w='29917' x='750' y='6250' />
+        <zone h='48375' id='17' name='Home / Away Goals per by Season' w='29250' x='29167' y='13875' />
+        <zone h='7250' id='20' name='Home / Away Goals per by Season' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]' type-v2='color' w='12250' x='833' y='78125' />
+        <zone h='53750' id='21' name='Goals vs Wins plot' w='39250' x='59250' y='13250' />
+        <zone h='9750' id='22' name='Goals vs Wins plot' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type-v2='color' w='11667' x='14000' y='78125' />
+        <zone h='37000' id='23' name='Total Goals per Team' w='70917' x='28917' y='63375' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='33' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='32' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone h='5469' id='9' type-v2='title' w='87115' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='70625' id='16' is-fixed='true' name='Goals per Season' w='29917' x='750' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='53750' id='21' is-fixed='true' name='Goals vs Wins plot' w='39250' x='59250' y='13250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9750' id='22' name='Goals vs Wins plot' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type-v2='color' w='11667' x='14000' y='78125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48375' id='17' is-fixed='true' name='Home / Away Goals per by Season' w='29250' x='29167' y='13875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7250' id='20' name='Home / Away Goals per by Season' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]' type-v2='color' w='12250' x='833' y='78125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37000' id='23' is-fixed='true' name='Total Goals per Team' w='70917' x='28917' y='63375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B130AD2B-C2FA-4F94-90A9-C693A3012FC2}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard - Home vs Away Goals'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='19' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='15' param='horz' type-v2='layout-flow' w='87115' x='586' y='1042'>
+              <zone h='97916' id='7' param='vert' type-v2='layout-flow' w='87115' x='586' y='1042'>
+                <zone h='5469' id='9' type-v2='title' w='87115' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='92447' id='8' type-v2='layout-basic' w='87115' x='586' y='6511' />
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97916' id='18' is-fixed='true' param='vert' type-v2='layout-flow' w='11713' x='87701' y='1042' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='31750' id='20' name='Full Time Home Goals by Season' w='59000' x='1000' y='9375' />
+        <zone h='29875' id='22' name='Full Time Away Goals by Season' w='58917' x='1000' y='48500' />
+        <zone h='61375' id='23' name='Shots per Team' w='80000' x='61583' y='14500' />
+        <zone h='9750' id='21' name='Full Time Home Goals by Season' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type-v2='color' w='11667' x='48417' y='1500' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='33' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='32' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone h='5469' id='9' type-v2='title' w='87115' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='244' h='31750' id='20' is-fixed='true' name='Full Time Home Goals by Season' w='59000' x='1000' y='9375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9750' id='21' name='Full Time Home Goals by Season' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type-v2='color' w='11667' x='48417' y='1500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='61375' id='23' is-fixed='true' name='Shots per Team' w='80000' x='61583' y='14500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='230' h='29875' id='22' is-fixed='true' name='Full Time Away Goals by Season' w='58917' x='1000' y='48500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4F651BCB-B175-4916-91A7-46E9BBFAC2BD}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard - Totals'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='22' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='7' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+              <zone h='5469' id='9' type-v2='title' w='98828' x='586' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='92447' id='8' type-v2='layout-basic' w='98828' x='586' y='6511' />
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='28125' id='10' name='Match Outcomes' w='31083' x='1083' y='6250' />
+        <zone h='36125' id='13' name='Home Team Wins' w='49917' x='33750' y='750' />
+        <zone h='9750' id='16' name='Home Team Wins' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type-v2='color' w='11667' x='85333' y='9500' />
+        <zone h='33203' id='18' name='Home Advantage' w='32211' x='2489' y='48698' />
+        <zone h='9766' id='19' name='Home Advantage' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Calculation_2639697124421640:nk]' type-v2='color' w='11640' x='18521' y='48177' />
+        <zone h='30729' id='20' name='Home Wins Trend' w='49561' x='34407' y='48047' />
+        <zone h='14750' id='23' name='Home Wins Trend' pane-specification-id='3' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]' type-v2='color' w='11667' x='85583' y='42625' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='33' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='32' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone h='5469' id='9' type-v2='title' w='98828' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='277' h='36125' id='13' is-fixed='true' name='Home Team Wins' w='49917' x='33750' y='750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9750' id='16' name='Home Team Wins' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type-v2='color' w='11667' x='85333' y='9500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='216' h='28125' id='10' is-fixed='true' name='Match Outcomes' w='31083' x='1083' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='236' h='30729' id='20' is-fixed='true' name='Home Wins Trend' w='49561' x='34407' y='48047'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14750' id='23' name='Home Wins Trend' pane-specification-id='3' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]' type-v2='color' w='11667' x='85583' y='42625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='255' h='33203' id='18' is-fixed='true' name='Home Advantage' w='32211' x='2489' y='48698'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9766' id='19' name='Home Advantage' pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Calculation_2639697124421640:nk]' type-v2='color' w='11640' x='18521' y='48177'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{851C3AE3-3A27-49FC-9A4A-A61E46029948}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' source-height='30'>
+    <window class='dashboard' maximized='true' name='Dashboard - Totals'>
+      <viewpoints>
+        <viewpoint name='Home Advantage' />
+        <viewpoint name='Home Team Wins'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Home Wins Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Match Outcomes'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='23' />
+      <simple-id uuid='{5DEC06F6-24AD-4835-B0BB-B0C6A41E666E}' />
+    </window>
+    <window class='dashboard' name='Dashboard - Home vs Away Goals'>
+      <viewpoints>
+        <viewpoint name='Full Time Away Goals by Season'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Full Time Home Goals by Season'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Shots per Team' />
+      </viewpoints>
+      <active id='20' />
+      <simple-id uuid='{1BD5179E-D968-4DA6-8E1C-AAC5524CBC99}' />
+    </window>
+    <window class='dashboard' name='Dashboard - Goals'>
+      <viewpoints>
+        <viewpoint name='Goals per Season' />
+        <viewpoint name='Goals vs Wins plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Home / Away Goals per by Season'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Goals per Team'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='16' />
+      <simple-id uuid='{CD764C29-A477-4934-ADB0-BCA4608316D5}' />
+    </window>
+    <window class='dashboard' name='Dashboard - Fouls vs Cards'>
+      <viewpoints>
+        <viewpoint name='Away Fouls vs Cards plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Fouls vs Cards' />
+        <viewpoint name='Home Fouls vs Cards plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='26' />
+      <simple-id uuid='{EBF37F9C-D7EC-4650-9453-A46DB9131473}' />
+    </window>
+    <window class='worksheet' name='Match Outcomes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Calculation_2639696805163008:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B6FC0E2F-6BDA-4D63-A45E-D8872F112A98}' />
+    </window>
+    <window class='worksheet' name='Home Team Wins'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1208806B-0747-4851-AD01-CA68A7711415}' />
+    </window>
+    <window class='worksheet' name='Total Goals per Team'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6EA4CECE-D209-4D0A-B9B0-5C90BFDEEC07}' />
+    </window>
+    <window class='worksheet' name='Goals / Shots'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='title' />
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8F1CD919-AD74-4207-8440-AF88EB7ED265}' />
+    </window>
+    <window class='worksheet' name='Home vs Away Goals'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AD6CE7C4-5EFE-4210-A4D5-0B1DEA4F5367}' />
+    </window>
+    <window class='worksheet' name='Home Advantage'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Calculation_2639697124421640:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B2FDFD5B-FFFE-4962-84F8-841060B58062}' />
+    </window>
+    <window class='worksheet' name='Full Time Home Goals by Season'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{452A44DE-86B2-454F-8389-868E9D4CECAE}' />
+    </window>
+    <window class='worksheet' name='Full Time Away Goals by Season'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{29B45B73-4440-4696-B819-5AF68EF71C01}' />
+    </window>
+    <window class='worksheet' name='Home / Away Goals per by Season'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E2B4AE16-F6D4-4020-90B5-9D89B67E875E}' />
+    </window>
+    <window class='worksheet' name='Home Wins Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Pivot Field Values:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DAF210C3-D531-4CFF-BAD4-9A8EAF661541}' />
+    </window>
+    <window class='worksheet' name='Goals per Season'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FBA91F5B-8605-4C08-8B96-2A06CCCFC57D}' />
+    </window>
+    <window class='worksheet' name='Fouls vs Cards'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4A997274-24DD-435E-BD16-84DD5EBB2E59}' />
+    </window>
+    <window class='worksheet' name='Away Fouls vs Cards plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D84CB3DC-6C7D-4942-8E05-9DC645B3F307}' />
+    </window>
+    <window class='worksheet' name='Home Fouls vs Cards plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{805F7F8C-CD77-44DB-9D4B-F1023B3FDC89}' />
+    </window>
+    <window class='worksheet' name='Goals vs Wins plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[none:Season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4560F8A1-6AD1-4B21-9885-4EE3AEE8B343}' />
+    </window>
+    <window class='worksheet' name='Shots per Team'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c7goyy1e17x7s13vld4s1dxa4ke].[sum:Calculation_2639697111588869:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4C44E312-51AE-4BAF-BB65-977565654BEB}' />
+    </window>
+  </windows>
+</workbook>
